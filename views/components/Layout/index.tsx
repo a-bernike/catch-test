@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from 'views/components/Header'
 import styles from './Layout.module.scss'
 
 interface Props {
@@ -10,6 +11,7 @@ const Layout: React.FC<Props> = (props) => {
     
     return (
         <div className={styles.layout}>
+            <Header {...props} />
             {children}
         </div>
     );

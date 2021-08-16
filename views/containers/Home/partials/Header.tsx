@@ -18,7 +18,7 @@ const Header: React.FC<Props> = props => {
     return (
         <div className={styles['home-header']}>
             <Link href={urlList.HOME}>
-                <a><img alt="logo" src="/images/logo.svg" /></a>
+                <a><img alt="logo" src="/images/logo.svg" width="250" height="100" /></a>
             </Link>
             <Dropdown
                 value={sortHigh}

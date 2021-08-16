@@ -67,11 +67,7 @@ class ApiRequest {
                     resolve(res.data);
                 } else {
                     reject(
-                        // new Error({
-                        //     status: false,
-                        //     message: 'Koneksi/Server Bermasalah'
-                        // })
-                        new Error("Koneksi/Server Bermasalah")
+                        new Error("Connection Error")
                     );
                 }
             })

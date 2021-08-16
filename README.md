@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a test project.
 
 ## Getting Started
 
 First, run the development server:
+1. Clone this repository
+2. Create `.env` file and copy-paste the value from `envsample` file.
+3. Run `npm install`.
+4. Run `npm run dev`.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Project Architecture
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. `/configs` = To store any constant variables. Inside it, there is `urlList.js` file to store the page URLs. When we want to define redirect link, just use the value in this file rather than hard coding it. By doing so, it will be easier to manage the links if in the future there will be url changes because we only need to change them from this file. There is another file called `index.js`. This file is used to export all files in `/configs` so we can just import it like this `import { urlList } from 'configs'`.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+2. `/helpers` = To store any helper functions. There is `/helpers/index.ts` to export all helper files inside this directory. `/Common` is used to store any common usage functions.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. `/models` = To store interfaces and types.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. `/pages` = The default routing directory from NextJS.
 
-## Learn More
+5. `/public` = The default public assets directory from NextJS.
 
-To learn more about Next.js, take a look at the following resources:
+6. `/services` = To store any API related functions. `/services/Product` is used to store Product API calls. `/services/request.ts` is a class to make it easier to use axios package.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+7. `/store` = To store redux related functions. `/store/actions` is used to store dispatch actions. `/store/reducers` is used to store the initialization of redux state. And `/store/constants` is used just to store constant variables.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+8. `/styles` = To store global SCSS files.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+9. `/views` = To store React components. React components used to display page's view will be placed in `/views/containers`. And global React components (e.g: Layout, Header) will be placed in `/views/components` while the reuseable one will be placed in `/views/components/widgets`.

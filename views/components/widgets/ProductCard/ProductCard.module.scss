@@ -41,7 +41,7 @@
         font-weight: bold;
     }
     &__info {
-        flex: 1;
+        flex: 1 1 auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -54,7 +54,7 @@
     }
     &__slashed-price {
         color: $grey;
-        flex: 1;
+        flex: 1 1 auto;
         display: flex;
         justify-content: center;
         align-items: flex-end;

@@ -22,15 +22,15 @@ const ProductCard: React.FC<Props> = props => {
             <div className={styles['product-card__container']}>
                 <div className={styles['product-card__image']}>
                     <img alt={title} src={image} />
-                    {qty <= 0 ? <Label customClass={styles['product-card__sold-out']}>SOLD OUT</Label> : null}
+                    {qty <= 0 ? <Label customClass={styles['product-card__sold-out']} title="SOLD OUT" /> : null}
                 </div>
                 <div className={styles['product-card__info']}>
                     <h3>{title}</h3>
                     {(slashedPrice && slashedPrice > 0) ?
-                        <p className={styles['product-card__slashed-price']}><s>{formatCurrency(slashedPrice / 100)}</s></p>
+                        <p className={styles['product-card__slashed-price']}><s>{formatCurrency(slashedPrice)}</s></p>
                         : null
                     }
-                    <p className={styles['product-card__price']}>{formatCurrency(price / 100)}</p>
+                    <p className={styles['product-card__price']}>{formatCurrency(price)}</p>
                 </div>
             </div>
         </div>

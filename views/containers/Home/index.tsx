@@ -12,7 +12,7 @@ export interface Props {
 
 const Home: NextPage<Props> = (props) => {
     const {products} = props
-
+    
     return (
         <div className={styles.home}>
             <Header />

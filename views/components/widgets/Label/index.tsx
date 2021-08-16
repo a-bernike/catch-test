@@ -4,16 +4,16 @@ import styles from './Label.module.scss'
 
 interface Props {
     customClass?: string,
-    children: any,
+    title: string,
     [rest: string]: any
 }
 
 const Label: React.FC<Props> = props => {
-    const {customClass, children, ...rest} = props
+    const {customClass, title, ...rest} = props
 
     return (
         <div className={cx(styles['label'], customClass)} {...rest}>
-            {children}
+            {title}
         </div>
     )
 }
