@@ -1,0 +1,9 @@
+@import 'styles/_variables';
+
+.dropdown {
+    height: 36px;
+    border-radius: 6px;
+    border: solid 1px $black;
+    padding: 2px 8px;
+    outline: none;
+}

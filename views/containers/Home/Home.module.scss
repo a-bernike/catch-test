@@ -1,5 +1,16 @@
 @import 'styles/variables';
 
 .home {
-    
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    &-header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        img {
+            max-width: 250px;
+            width: 100%;
+        }
+    }
 }

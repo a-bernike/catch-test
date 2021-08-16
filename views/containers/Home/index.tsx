@@ -2,6 +2,7 @@ import React from 'react'
 import { NextPage } from 'next'
 import { getProducts } from 'services/Product'
 import { Nullable, TProductSearch } from 'models'
+import { Header } from './partials'
 import styles from './Home.module.scss'
 
 export interface Props {
@@ -13,7 +14,7 @@ const Home: NextPage<Props> = (props) => {
 
     return (
         <div className={styles.home}>
-            Home
+            <Header />
         </div>
     )
 }
