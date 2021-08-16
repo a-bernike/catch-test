@@ -1,0 +1,67 @@
+@import 'styles/variables';
+
+.product-card {
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 0 8px;
+    &__container {
+        cursor: pointer;
+        height: 100%;
+        border: solid 1px $grey;
+        display: flex;
+        flex-direction: column;
+        transition: all .3s ease-in-out;
+        &:hover {
+            box-shadow: 0px 4px 8px 4px rgba($black, 0.2);
+            border-color: $grey-1;
+        }
+    }
+    &__image {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        padding-top: 80%;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__sold-out {
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        right: 6px;
+        background-color: $red;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    &__info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        padding: 16px;
+        h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+    }
+    &__slashed-price {
+        color: $grey;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 4px;
+    }
+    &__price {
+        font-weight: bold;
+        font-size: 24px;
+    }
+}

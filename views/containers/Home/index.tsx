@@ -4,6 +4,7 @@ import { getProducts } from 'services/Product'
 import { Nullable, TProductSearch } from 'models'
 import { Header } from './partials'
 import styles from './Home.module.scss'
+import List from './partials/List'
 
 export interface Props {
     products: Nullable<TProductSearch>
@@ -15,6 +16,9 @@ const Home: NextPage<Props> = (props) => {
     return (
         <div className={styles.home}>
             <Header />
+            <List
+                products={(products && products.results) ? products.results : null}
+            />
         </div>
     )
 }

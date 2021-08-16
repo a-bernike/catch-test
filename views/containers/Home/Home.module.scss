@@ -13,4 +13,21 @@
             width: 100%;
         }
     }
+    &-list {
+        margin-top: 26px;
+        display: flex;
+        flex-flow: wrap;
+        &__product-card {
+            width: calc(100% / 4 - 16px);
+            @media screen and (max-width: 1024px) {
+                width: calc(100% / 3 - 16px);
+            }
+            @media screen and (max-width: 768px) {
+                width: calc(100% / 2 - 16px);
+            }
+            @media screen and (max-width: 480px) {
+                width: 100%
+            }
+        }
+    }
 }

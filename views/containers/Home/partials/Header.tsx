@@ -24,8 +24,8 @@ const Header: React.FC<Props> = props => {
                 value={sortHigh}
                 onChange={(ev: React.ChangeEvent<HTMLSelectElement>) => dispatch(setSortHigh(ev.target.value))}
             >
-                <option value={1}>Highest Price</option>
-                <option value={0}>Lowest Price</option>
+                <option value="1">Highest Price</option>
+                <option value="0">Lowest Price</option>
             </Dropdown>
         </div>
     )
