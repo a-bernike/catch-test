@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+$transform: capitalize, uppercase, lowercase;
+
+h1 {
+    font-size: $h1-fsize;
+    font-weight: normal;
+    // line-height: 34px;
+    margin: 0;
+}
+h2 {
+    font-size: $h2-fsize;
+    font-weight: bold;
+    // line-height: 41px;
+    margin: 0;
+}
+h3 {
+    font-size: $h3-fsize;
+    font-weight: 600;
+    margin: 0;
+}
+h4 {
+    font-size: $h4-fsize;
+    font-weight: bold;
+    margin: 0;
+}
+h5 {
+    font-size: $h5-fsize;
+    font-weight: bold;
+    margin: 0;
+}
+h6 {
+    font-size: $h6-fsize;
+    font-weight: bold;
+    margin: 0;
+}
+p {
+    font-size: $default-fsize;
+    font-weight: normal;
+    margin: 0;
+}
+
+@each $val in $transform {
+    .text-#{$val} {
+        text-transform: $val;
+    }
+}
+
+.font-bolder {
+    font-weight: bolder;
+}
